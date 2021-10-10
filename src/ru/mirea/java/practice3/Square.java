@@ -2,24 +2,15 @@ package ru.mirea.java.practice3;
 
 public class Square extends Rectangle {
     public Square(){
-        this.filled = false;
-        this.color = "black";
-        this.width = 1;
-        this.length = 1;
+        super();
     }
 
     public Square(double side){
-        this.filled = false;
-        this.color = "black";
-        this.width = side;
-        this.length = side;
+        super(side,side);
     }
 
     public Square(double side, String color, boolean filled){
-        this.color = color;
-        this.filled = filled;
-        this.width = side;
-        this.length = side;
+        super(side,side,color,filled);
     }
 
     public double getSide() {

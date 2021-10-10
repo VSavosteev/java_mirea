@@ -2,15 +2,15 @@ package ru.mirea.java.practice4;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
+import java.awt.event.*;
 
 public class Pr4 extends JFrame{
-    JButton realM = new JButton("Real Madrid");
-    JButton milan = new JButton("AC Milan");
+    JButton realMadrid = new JButton("Real Madrid");
+    JButton ACmilan = new JButton("AC Milan");
 
     JLabel score = new JLabel();
     JLabel winCommand = new JLabel();
-    JLabel lastGol = new JLabel();
+    JLabel lastGoal = new JLabel();
 
     int milGoal = 0, madrGoal = 0;
 
@@ -18,15 +18,15 @@ public class Pr4 extends JFrame{
         super("Real Madrid vs AC Milan");
         setDefaultCloseOperation( EXIT_ON_CLOSE );
         setLayout(new GridLayout(3, 1));
-        add(realM);
+        add(realMadrid);
         setSize(500,500);
 
         updateScore();
         updateWinCommand();
 
-        milan.addActionListener(new AbstractAction() {
+        ACmilan.addMouseListener(new MouseAdapter() {
             @Override
-            public void actionPerformed(ActionEvent e) {
+            public void mouseClicked(MouseEvent e) {
                 ++milGoal;
                 updateWinCommand();
                 updateScore();
@@ -34,10 +34,10 @@ public class Pr4 extends JFrame{
             }
         });
 
-        realM.addActionListener(new AbstractAction() {
+        realMadrid.addMouseListener(new MouseAdapter() {
             @Override
-            public void actionPerformed(ActionEvent e) {
-                madrGoal++;
+            public void mouseClicked(MouseEvent e) {
+                ++madrGoal;
                 updateWinCommand();
                 updateScore();
                 updateLastGoal("Real Madrid");
@@ -50,15 +50,15 @@ public class Pr4 extends JFrame{
         winCommand.setVerticalAlignment(JLabel.CENTER);
         winCommand.setHorizontalAlignment(JLabel.CENTER);
         winCommand.setFont(fnt22);
-        add(milan);
+        add(ACmilan);
         add(score);
         score.setVerticalAlignment(JLabel.CENTER);
         score.setHorizontalAlignment(JLabel.CENTER);
         score.setFont(fnt);
-        add(lastGol);
-        lastGol.setVerticalAlignment(JLabel.CENTER);
-        lastGol.setHorizontalAlignment(JLabel.CENTER);
-        lastGol.setFont(fnt22);
+        add(lastGoal);
+        lastGoal.setVerticalAlignment(JLabel.CENTER);
+        lastGoal.setHorizontalAlignment(JLabel.CENTER);
+        lastGoal.setFont(fnt22);
     }
 
     public void updateWinCommand() {
@@ -71,7 +71,7 @@ public class Pr4 extends JFrame{
     }
 
     public void updateLastGoal(String command) {
-        lastGol.setText("Last goal " + command);
+        lastGoal.setText("Last goal " + command);
     }
 
     public void updateScore() {

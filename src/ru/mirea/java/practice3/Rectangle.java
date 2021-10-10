@@ -5,22 +5,19 @@ public class Rectangle extends Shape{
     protected double length;
 
     public Rectangle(){
-        this.filled = false;
-        this.color = "black";
+        super();
         this.width = 1;
         this.length = 1;
     }
 
     public Rectangle(double width, double length){
-        this.filled = false;
-        this.color = "black";
+        super();
         this.width = width;
         this.length = length;
     }
 
     public Rectangle(double width, double length, String color, boolean filled){
-        this.color = color;
-        this.filled = filled;
+        super(color,filled);
         this.width = width;
         this.length = length;
     }
