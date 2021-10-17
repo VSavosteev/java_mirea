@@ -15,6 +15,7 @@ public class StudentTest {
             System.out.println(s);
         }
         System.out.println();
+
         System.out.println("отсортированный по ID массив:");// Вставки по id
         Student temp;
         for (int i = 1; i < students.length; i++) {

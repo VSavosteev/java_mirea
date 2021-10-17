@@ -1,4 +1,6 @@
-package ru.mirea.java.practice7;
+package ru.mirea.java.practice7.ex5;
+
+import ru.mirea.java.practice7.ex1.Game1;
 
 import javax.swing.*;
 import java.awt.*;

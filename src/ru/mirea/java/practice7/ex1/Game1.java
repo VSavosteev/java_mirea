@@ -1,4 +1,4 @@
-package ru.mirea.java.practice7;
+package ru.mirea.java.practice7.ex1;
 
 import java.util.Stack;
 

@@ -10,7 +10,6 @@ public class Student implements Comparable {
         this.GPA = GPA;
     }
 
-    @Override
     public String toString() {
         return "Student{" +
                 "idNum=" + idNum +

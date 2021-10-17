@@ -1,12 +1,12 @@
-package ru.mirea.java.practice7;
+package ru.mirea.java.practice7.ex2;
 
 import java.util.ArrayDeque;
-import java.util.Deque;
+import java.util.Queue;
 
-public class Game3 {
-    Deque<Integer> fp, sp;
+public class Game2 {
+    Queue<Integer> fp, sp;
 
-    public Game3(String fp, String sp) {
+    public Game2(String fp, String sp) {
         this.fp = new ArrayDeque<>();
         this.sp = new ArrayDeque<>();
         for(int i = 0; i < 5; i ++){
@@ -40,9 +40,9 @@ public class Game3 {
     }
 
     public static void main(String[] args) {
-        System.out.println(new Game3("13579", "24680").play());
-        System.out.println(new Game3("67890", "12345").play());
-        System.out.println(new Game3("13029", "42685").play());
+        System.out.println(new Game2("13579", "24680").play());
+        System.out.println(new Game2("67890", "12345").play());
+        System.out.println(new Game2("13029", "42685").play());
     }
 
 }
