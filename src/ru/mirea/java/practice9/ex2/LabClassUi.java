@@ -71,7 +71,6 @@ public class LabClassUi extends JFrame {
         header.setReorderingAllowed(false);
         header.setResizingAllowed(false);
 
-        // Почему на него нельзя повесить ActionListener?..
         header.addMouseListener(new MouseInputListener() {
             @Override
             public void mouseClicked(MouseEvent e) {
@@ -119,7 +118,6 @@ public class LabClassUi extends JFrame {
             }
         });
 
-        // Adding comps
         getContentPane().add(new JScrollPane(studTable), BorderLayout.CENTER);
 
         getContentPane().add(pN, BorderLayout.NORTH);

@@ -1,4 +1,4 @@
-package ru.mirea.java.practice12.ex5;
+package ru.mirea.java.practice12_13_14_15.ex5;
 
 import java.io.FileReader;
 import java.io.IOException;

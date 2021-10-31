@@ -1,4 +1,4 @@
-package ru.mirea.java.practice12.ex2;
+package ru.mirea.java.practice12_13_14_15.ex2;
 
 import java.util.StringTokenizer;
 
@@ -9,7 +9,7 @@ public class Address {
         if(stringToParse == null) throw new NullPointerException();
         String[] s;
         if(multiDivider){
-            StringTokenizer st = new StringTokenizer(stringToParse, ",.;");
+            StringTokenizer st = new StringTokenizer(stringToParse, ",.;-");
             s = new String[st.countTokens()];
             int i = 0;
             while(st.hasMoreTokens()) s[i++] = st.nextToken();
@@ -44,7 +44,7 @@ public class Address {
         Address a1 = new Address("Страна, Регион, Город, Улица, Дом, Корпус, Квартира", false);
         Address a2 = new Address("Россия, Московская область, Москва, Проспект Вернадского, 78, 4, 101", true);
         Address a3 = new Address("UK, London, London, Trafalgar square, 2, 3, 4", true);
-        Address a4 = new Address("Россия. Московская область; Москва, Улица11, 12; 2; 104", false);
+        Address a4 = new Address("Россия. Московская область; Москва, Улица11, 12- 2- 104", false);
 
         System.out.println(a1);
         System.out.println(a2);

@@ -1,4 +1,4 @@
-package ru.mirea.java.practice12.ex3;
+package ru.mirea.java.practice12_13_14_15.ex3;
 
 public class Shirt {
     private String article, fullName, color, size;

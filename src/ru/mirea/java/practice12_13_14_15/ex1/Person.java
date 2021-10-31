@@ -1,4 +1,4 @@
-package ru.mirea.java.practice12.ex1;
+package ru.mirea.java.practice12_13_14_15.ex1;
 
 public class Person {
     private String name, surname, patronymic;
